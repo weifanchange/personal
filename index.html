@@ -8,33 +8,38 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
     </style>
 </head>
 <body>
-    <div class=container>
-        <!-- 首頁、個人資料、技能、作品、經歷 -->
-        <div class="header">
-            <span class="fa-stack fa-lg fa-1x st-bar" style="display:none;" >
-                <a href="#">
-                    <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-                </a>
-            </span>
-            <ul>
-                <li><a class="bar-item" href="#home">Home</a></li>
-                <li><a class="bar-item" href="#personal">Personal</a></li>
-                <li><a class="bar-item" href="#education">Education</a></li>
-                <li><a class="bar-item" href="#work">Work</a></li>
-                <li><a class="bar-item" href="#skill">Skill</a></li>
-                <li><a class="bar-item" href="#project">Project</a></li>
-            </ul>
+    <div id="menu" class="header">
+        <span class="fa-stack fa-lg fa-1x st-bar">
+            <a href="#">
+                <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+            </a>
+        </span>
+        <ul>
+            <li data-menuanchor="#home"><a class="bar-item" href="#home">Home</a></li>
+            <li data-menuanchor="#personal"><a class="bar-item" href="#personal">Personal</a></li>
+            <li data-menuanchor="#education"><a class="bar-item" href="#education">Education</a></li>
+            <li data-menuanchor="#work"><a class="bar-item" href="#work">Work</a></li>
+            <li data-menuanchor="#skill"><a class="bar-item" href="#skill">Skill</a></li>
+            <li data-menuanchor="#project"><a class="bar-item" href="#project">Project</a></li>
+        </ul>
+        <div data-menuanchor="#home" class="back2Top">
+            <a href="#home"><img src="img/top.png" alt="回到頁首"></a>
         </div>
-        
-        <div id="home">
+    </div>
+    <div id="fullpage" class=container>
+        <!-- 首頁 -->
+        <div class="page home">
             <p class="name">Hello, 我叫張維帆</p>
         </div>
-        <div class="page" id="personal">
+
+        <!-- 個人資料 -->
+        <div class="page personal">
             <h3>Personal</h3>
             <div class="personal-box">
                 <div class="per-img">
@@ -51,7 +56,9 @@
                 </div>
             </div>
         </div>
-        <div class="page" id="education">
+
+        <!-- 教育程度 -->
+        <div class="page education">
             <h3>Education</h3>
             <div class="education-box">
                 <div>
@@ -67,7 +74,9 @@
             </div>
             
         </div>
-        <div class="page" id="work">
+        
+        <!-- 工作經歷 -->
+        <div class="page work">
             <h3>Work</h3>
             <div class="work-box">
                 <div>
@@ -82,7 +91,9 @@
                 </div>
             </div>
         </div>
-        <div class="page" id="skill">
+
+        <!-- 技能 -->
+        <div class="page skill">
             <h3>Skill</h3>
             <div class="skill-box">
                 <ul>
@@ -118,7 +129,9 @@
                 </ul>
             </div>
         </div>
-        <div class="page" id="project">
+
+        <!-- 作品 -->
+        <div class="page project">
             <h3>Project</h3>
             <div class="project-box">
                 <div>
@@ -198,13 +211,20 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+
+        <!-- 頁尾 -->
+        <div class="page footer fp-auto-height">
             <p>©2016 Wei-Fan Chang.</p>
         </div>
-        
 
     </div>
+    <!-- 頁尾 -->
+    <!-- <div class="footer fp-auto-height page">
+        <p>©2016 Wei-Fan Chang.</p>
+    </div> -->
     <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/fullpage.js"></script>
+    <script src="js/scrolloverflow.js"></script>
     <script src="js/all.js"></script>
 </body>
 </html>

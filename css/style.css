@@ -1,83 +1,7 @@
 body{
     font-family: Montserrat,Helvetica,arial,Microsoft JhengHei,"微軟正黑體",sans-serif;
 }
-.header{
-    display: block;
-    position: fixed;
-    top: 0px;
-    height: 50px;
-    width: 100%;
-    background: #000;
-    z-index: 1;
-}
-.header li{
-    display:inline-block;
-    margin: 0px 10px;
-}
-.header a{
-    display: block;
-    text-decoration: none;
-    color: lightgray;
-    font-size: 20px;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-}
-.header a:hover{
-    color:#fff;
-}
-.footer{
-    display: block;
-    bottom: 0px;
-    height: 50px;
-    width: 100%;
-    background: #000;
-}
-.footer p{
-    color: #fff;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    margin: 0px auto;
-}
-#home{
-    background: url(../img/bg01.jpg) no-repeat;
-    width: 100%;
-    min-height: 100vh;
-}
-.name{
-    font-size: 50px;
-    line-height: 100vh;
-    color: #fff;
-    margin: 0px auto;
-    text-align: center;
-    border: 1px solid #000;
-}
-.page{
-    min-height: 100vh;
-}
-#education, #skill, #project{
-    background: #f2f2f2;
-}
-.education-box div, .work-box div{
-    /* border: 1px solid #000; */
-    border-radius: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
-    background: #fff;
-    margin: 10px;
-    padding:20px;
-}
-.education-box p, .work-box p{
-    font-size: 16px;
-    line-height: 1.5;
-}
-.education-box, .work-box{
-    max-width: 1200px;
-    margin:0 auto;
-}
-
-
-/* skill */
+/* 共用 */
 h3{
     font-size: 40px;
     font-weight: 700;
@@ -90,14 +14,109 @@ h4{
     font-weight: 700;
     margin: 15px 0;
 }
-.skill-box{
-    /* border:1px solid black; */
+.home, .page{
+    min-height: 100vh;
+}
+.education, .skill{
+    background: #f2f2f2;
+}
+.personal-box, .education-box, .work-box, .skill-box, .project-box{
     max-width: 1200px;
-    margin: 0 auto;
+    width: 90%;
+    margin:0 auto;
+}
+/* header */
+.header{
+    /* display: block; */
+    position: fixed;
+    background: #000;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+    /* top: 0px; */
+    
+    
+}
+.header li{
+    display:inline-block;
+}
+.header a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: lightgray;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 10px;
+}
+.header a:hover{
+    color:#fff;
+}
+.st-bar{
+    display: none;
+    border:1px solid #fff;
+    height: 50px;
+    opacity: 0.8;
+}
+.home{
+    background: url(../img/bg01.jpg) bottom center no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.name{
+    font-size: 50px;
+    line-height: 100vh;
+    color: #fff;
+    margin: 0px auto;
+    text-align: center;
+}
+/* personal */
+.personal-box{
+    /* border: 1px solid #000; */
     border-radius: 10px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
     background: #fff;
-    height:50vh;
+    display: flex;
+}
+.per-img{
+    flex:1;
+    margin: 10px;
+    text-align: center;
+}
+.per-img img{
+    border-radius: 35%;
+}
+.per-content{
+    flex:3;
+    margin: 10px;
+}
+.per-content p{
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* education */
+.education-box div, .work-box div{
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
+    margin: 10px;
+    padding:20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* skill */
+.skill-box{
+    /* border:1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
+    min-height:50vh;
+    padding:10px;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -133,45 +152,10 @@ h4{
 .fa-inverse:hover, i.active{
     color: lightblue; 
 }
-.st-bar{
-    border:1px solid #fff;
-    height: 50px;
-    border-radius: 0;
-    opacity: 0.8;
-}
-/* personal */
-.personal-box{
-    max-width: 1200px;
-    /* border: 1px solid #000; */
-    border-radius: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
-    background: #fff;
-    margin: 0px auto;
-    display: flex;
-}
-.per-img{
-    flex:1;
-    margin: 10px;
-    text-align: center;
-}
-.per-img img{
-    border-radius: 40%;
-}
-.per-content{
-    flex:3;
-    margin: 10px;
-}
-.per-content p{
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.5;
-}
 
 /* project */
 .project-box{
     /* border: 5px solid green; */
-    max-width: 1200px;
-    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -188,20 +172,27 @@ h4{
     font-weight: 600;
     font-size: 20px;
 }
+.project-box .cap{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border:1px solid #000;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    width: 280px;
+    height: 210px;
+}
 .description{
     background: #222;
     width: 100%;
     height: 100%;
     border-radius: 10px;
     opacity: 0;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     font-size: 20px;
     transition: all 0.5s;
-
 }
 .description li{
     color: #eee;
@@ -209,15 +200,6 @@ h4{
 }
 .description:hover{
     opacity: 0.8;
-}
-.project-box .cap{
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    border:1px solid #000;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
-    width: 240px;
-    height: 180px;
 }
 .badmintonPicture{background-image: url('../img/badmintonPicture.jpg')}
 .calculator{background-image: url('../img/calculator.jpg')}
@@ -227,18 +209,38 @@ h4{
 .openDataUV{background-image: url('../img/openDataUV.jpg')}
 .openDataAQI{background-image: url('../img/openDataAQI.jpg');}
 
-/* .project-box img{
-    width:300px;
-} */
+/* footer */
+.footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    min-height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+.back2Top{
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    opacity: 0.4;
+}
+.back2Top:hover{
+    opacity: 0.8;
+}
+.back2Top img{
+    width: 80px;
+}
 @media only screen and (min-width: 550px) and (max-width: 900px) {
-    /* .project-box img{
-        width:200px;
-    } */
 }
 @media only screen and (max-width: 550px) {
-    /* .project-box img{
-        width:160px;
-    } */
+    .header ul{
+        display: none;
+    }
+    .st-bar{
+        display: block;
+    }
     h4{
         font-size: 18px;
     }
@@ -251,19 +253,21 @@ h4{
         background: #000;
         border: 1px solid #fff;
     }
-
     .page{
         height: auto;
     }
+    .skill-box span{
+        font-size: 45px;
+    }
 }
 @media only screen and (max-width: 440px) {
-    /* .project-box img{
-        width:120px;
-    } */
     h4{
         font-size: 16px;
     }
     .name{
+        font-size: 30px;
+    }
+    .skill-box span{
         font-size: 30px;
     }
 }
