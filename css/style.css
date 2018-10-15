@@ -60,7 +60,10 @@ body{
     background: #f2f2f2;
 }
 .education-box div, .work-box div{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
     margin: 10px;
     padding:20px;
 }
@@ -69,7 +72,7 @@ body{
     line-height: 1.5;
 }
 .education-box, .work-box{
-    width: 90%;
+    max-width: 1200px;
     margin:0 auto;
 }
 
@@ -89,7 +92,12 @@ h4{
 }
 .skill-box{
     /* border:1px solid black; */
-    height:80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
+    height:50vh;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -133,8 +141,11 @@ h4{
 }
 /* personal */
 .personal-box{
-    width: 90%;
-    border: 1px solid #000;
+    max-width: 1200px;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
     margin: 0px auto;
     display: flex;
 }
@@ -216,9 +227,18 @@ h4{
 .openDataUV{background-image: url('../img/openDataUV.jpg')}
 .openDataAQI{background-image: url('../img/openDataAQI.jpg');}
 
+/* .project-box img{
+    width:300px;
+} */
 @media only screen and (min-width: 550px) and (max-width: 900px) {
+    /* .project-box img{
+        width:200px;
+    } */
 }
 @media only screen and (max-width: 550px) {
+    /* .project-box img{
+        width:160px;
+    } */
     h4{
         font-size: 18px;
     }
