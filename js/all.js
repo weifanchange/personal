@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $('#fullpage').fullpage({
-        anchors: ['home', 'personal', 'education', 'work', 'skill', 'project'],
+        anchors: ['home', 'personal', 'education', 'work', 'skill', 'project', 'footer'],
         sectionSelector: '.page',
         scrollOverflow: true,
         menu: '#menu'
