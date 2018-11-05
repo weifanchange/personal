@@ -43,7 +43,11 @@ h4{
     color: #fff;
     margin: 0px auto;
     text-align: center;
+    /* animation: cursor 1s steps(1) infinite; */
 }
+/* @keyframes cursor {
+    50% { border-color: transparent; }
+} */
 /* personal */
 .per-img{
     margin: 10px;
