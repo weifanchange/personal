@@ -7,29 +7,11 @@ $(document).ready(function () {
         menu: '#menu'
     });
 
-    $(".st-bar").click(function (e) { 
-        e.preventDefault();
-        $(".st-bar i").toggleClass("active");
-        $(".header ul").slideToggle();
-    });
-    
-    $(".bar-item").click(function (e) {
-        // e.preventDefault();
-        var WIDTH = $(window).innerWidth();
-        if(WIDTH<=550){
-            $(".st-bar i").toggleClass("active");
-            $(".header ul").slideToggle(); 
-        }
-    });
-
-    // 視窗變化事件
-    $(window).resize(function () { 
-        var WIDTH = $(window).innerWidth();
-        if(WIDTH>550){
-            $(".header ul").show();
-        }
-        else{
-            $(".header ul").hide();
-        }
-    });
+    // nav-bar 自動收合
+    if($(window).width()<992){
+        $('.navbar-nav').click(function (e) { 
+            // e.preventDefault();
+            $(".navbar-toggler").click();
+        });
+    }
 });

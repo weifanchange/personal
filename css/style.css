@@ -14,51 +14,24 @@ h4{
     font-weight: 700;
     margin: 15px 0;
 }
-.home, .page{
-    min-height: 100vh;
+.box{
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    background: #fff;
+    margin: 10px;
+    padding:20px;
 }
 .education, .skill{
     background: #f2f2f2;
 }
-.personal-box, .education-box, .work-box, .skill-box, .project-box{
-    max-width: 1200px;
-    width: 90%;
-    margin:0 auto;
-}
+
 /* header */
 .header{
-    /* display: block; */
     position: fixed;
-    background: #000;
     width: 100%;
     z-index: 1;
-    height: 50px;
-    /* top: 0px; */
-    
-    
 }
-.header li{
-    display:inline-block;
-}
-.header a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: lightgray;
-    font-size: 20px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0px 10px;
-}
-.header a:hover{
-    color:#fff;
-}
-.st-bar{
-    display: none;
-    border:1px solid #fff;
-    height: 50px;
-    opacity: 0.8;
-}
+/* home */
 .home{
     background: url(../img/bg01.jpg) bottom center no-repeat;
     background-size: cover;
@@ -72,71 +45,14 @@ h4{
     text-align: center;
 }
 /* personal */
-.personal-box{
-    /* border: 1px solid #000; */
-    border-radius: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
-    background: #fff;
-    display: flex;
-}
 .per-img{
-    flex:1;
     margin: 10px;
     text-align: center;
 }
 .per-img img{
-    border-radius: 35%;
-}
-.per-content{
-    flex:3;
-    margin: 10px;
-}
-.per-content p{
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* education */
-.education-box div, .work-box div{
-    /* border: 1px solid #000; */
     border-radius: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
-    background: #fff;
-    margin: 10px;
-    padding:20px;
-    font-size: 16px;
-    line-height: 1.5;
 }
-
 /* skill */
-.skill-box{
-    /* border:1px solid black; */
-    border-radius: 10px;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
-    background: #fff;
-    min-height:50vh;
-    padding:10px;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-}
-.skill-box p{
-    line-height: 1.4;
-    color: #777;
-}
-.skill-box ul{
-    display:flex;
-    flex-wrap: wrap;
-    /* border: 1px solid blue; */
-}
-.skill-box li{
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    /* border: 1px solid greenyellow; */
-}
-
 .st-transform {
     background-color: lightblue;
     border-radius: 50%;
@@ -154,32 +70,24 @@ h4{
 }
 
 /* project */
-.project-box{
-    /* border: 5px solid green; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.bg-cover{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.40);
+    height: 210px;
+    max-width: 255px;
+    margin:0 auto;
 }
-.project-box div{
-    margin: 10px;
-}
-.project-box a{
+.bg-cover a{
     text-decoration: none;
 }
-.project-box p{
+.project-title{
     line-height: 1.5;
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-}
-.project-box .cap{
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    border:1px solid #000;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
-    width: 280px;
-    height: 210px;
 }
 .description{
     background: #222;
@@ -187,6 +95,7 @@ h4{
     height: 100%;
     border-radius: 10px;
     opacity: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -195,6 +104,7 @@ h4{
     transition: all 0.5s;
 }
 .description li{
+    list-style-type:none;
     color: #eee;
     line-height: 1.5;
 }
@@ -214,14 +124,14 @@ h4{
 
 /* footer */
 .footer{
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    min-height: 50px;
-    line-height: 50px;
+    min-height: 10px;
     text-align: center;
     background: #000;
     color: #fff;
+}
+.footer p{
+    padding:15px 0;
+    margin: 0;
 }
 .back2Top{
     position: fixed;
@@ -238,29 +148,21 @@ h4{
 @media only screen and (min-width: 550px) and (max-width: 900px) {
 }
 @media only screen and (max-width: 550px) {
-    .header ul{
-        display: none;
-    }
-    .st-bar{
-        display: block;
-    }
     h4{
         font-size: 18px;
     }
     .name{
         font-size: 40px;
     }
-    .header li{
-        display:block;
-        margin: 0px;
-        background: #000;
-        border: 1px solid #fff;
-    }
-    .page{
-        height: auto;
-    }
-    .skill-box span{
+    .st-transform {
         font-size: 45px;
+    }
+    .back2Top{
+        bottom: 40px;
+        right: 20px;
+    }
+    .back2Top img{
+        width: 60px;
     }
 }
 @media only screen and (max-width: 440px) {
@@ -268,9 +170,6 @@ h4{
         font-size: 16px;
     }
     .name{
-        font-size: 30px;
-    }
-    .skill-box span{
         font-size: 30px;
     }
 }
